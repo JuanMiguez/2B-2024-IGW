@@ -16,21 +16,30 @@ las etiquetas pueden ser de dos tipos:
   <title>Estructura basica</title>
   el contenido es lo que queda en medio de la etiquta de apertura y la etiqueta de cierre
 -->
-<!--anatomia de una etiqqueta-->
-<etiquetaDeApertura Atributo="valorDelAtributo"> contenido <etiquetaDeCierre> 
+<!--sintaxis de una etiqqueta-->
+<etiquetaDeApertura Atributo="valorDelAtributo"> este contenido aparece <etiquetaDeCierre> 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!DOCTYPE html> <!-- informa al navegador qué versión de HTML (o XML) se usó para escribir el documento.-->
+<!--las etiquetas "hijas" heredan los atributos del "padre"-->
+<html lang="es"> <!--El elemento HTML <html> (o elemento HTML raiz) representa la raiz de un documento HTML. El resto de elementos descienden de este elemento. el atributo lang define para todo el documento (ppor herencia) el idioma del contenido-->
+<head><!--provee información general (metadatos) acerca del documento, incluyendo su título y enlaces a scripts y hojas de estilos.-->
+    <!--meta de "metainformation" - metainformación. Sirve para aportar información sobre el documento..-->
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estructura basica</title>
+    <title>Estructura basica html</title><!--define el nombre de la pestaña-->
     
 </head>
-<body>
+<body><!--representa el contenido de un documento HTML. Solo puede haber un elemento <body> en un documento.-->
     
     <h1>HOLA MUNDO</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam omnis, error porro alias quibusdam corporis pariatur, praesentium necessitatibus illo eaque placeat iure voluptas, cupiditate mollitia debitis quos! Eveniet, laudantium exercitationem!</p>
+    <span>texto punto y seguido</span>
+    <b>bold</b>
+    <i>italic</i>
     
+   
 
 </body>
 </html>
+
+
