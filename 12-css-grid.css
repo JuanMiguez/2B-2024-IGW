@@ -1,0 +1,92 @@
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Grid principal utilizando grid-template-areas */
+.main-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "content sidebar"
+        "footer footer";
+    gap: 10px;
+    padding: 10px;
+    min-height: 100vh; /* Asegura que el layout ocupe toda la altura de la ventana */
+}
+
+/* Estilos para cada área */
+header {
+    grid-area: header;
+    background-color: #b0c4de;
+    padding: 20px;
+    display: flex;
+}
+
+section.content {
+    grid-area: content;
+    background-color: #e6f5d0;
+    padding: 10px;
+}
+
+section.sidebar {
+    grid-area: sidebar;
+    background-color: #f7f7c5;
+    padding: 10px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #b0c4de;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos para el artículo y sub-contenidos */
+article {
+    display: grid;
+    grid-template-areas:
+        "article-header article-header"
+        "article-content ."
+        "article-footer article-footer";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+    background-color: #f5d0d0;
+    padding: 10px;
+}
+
+article header {
+    grid-area: article-header;
+}
+
+article .sub-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    grid-area: article-content;
+}
+
+article .sub-content p {
+    grid-area: p1;
+}
+
+article aside {
+    grid-area: aside;
+    background-color: #f7e8b5;
+    padding: 10px;
+}
+
+article footer {
+    grid-area: article-footer;
+}
+
+.logo{
+    width: 100px;
+    padding-right: 20px;
+}
+

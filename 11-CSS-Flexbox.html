@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría y Ejemplos de CSS Flexbox</title>
+    <link rel="stylesheet" href="css/11-CSS-Flexbox.css">
+</head>
+<body>
+    <header>
+        <h1>Teoría y Ejemplos de CSS Flexbox</h1>
+    </header>
+
+    <main>
+        <section id="teoria">
+            <h2>Teoría de Flexbox</h2>
+            <p>Flexbox es un modelo de diseño unidimensional que facilita la distribución de elementos dentro de un contenedor, incluso cuando su tamaño es desconocido y/o dinámico.</p>
+            <h3>Conceptos Clave</h3>
+            <ul>
+                <li><strong>Contenedor Flex:</strong> Elemento que tiene la propiedad <code>display: flex;</code>.</li>
+                <li><strong>Elementos Flex:</strong> Los elementos hijos directos de un contenedor flex.</li>
+            </ul>
+            <h3>Propiedades del Contenedor Flex</h3>
+            <ul>
+                <li><code>flex-direction</code>: Define la dirección en la que se colocan los elementos flexibles en el contenedor (fila, columna).</li>
+                <li><code>justify-content</code>: Alinea los elementos flexibles a lo largo del eje principal.</li>
+                <li><code>align-items</code>: Alinea los elementos flexibles a lo largo del eje transversal.</li>
+                <li><code>flex-wrap</code>: Define si los elementos flexibles deben ser de una sola línea o pueden fluir en varias líneas.</li>
+                <li><code>align-content</code>: Alinea las líneas flexibles cuando hay espacio adicional en el eje transversal.</li>
+            </ul>
+        </section>
+
+        <section id="ejemplos">
+            <h2>Ejemplos de Flexbox</h2>
+            <h3>Ejemplo Básico</h3>
+            <p>HTML:</p>
+            <pre><code>&lt;section class="flex-container"&gt;
+    &lt;div class="flex-item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="flex-item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="flex-item"&gt;Item 3&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+
+            <p>CSS:</p>
+            <pre><code>.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+.flex-item {
+    background-color: #e9ecef;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    flex: 1;
+    margin: 5px;
+    text-align: center;
+}</code></pre>
+
+            <section class="flex-container">
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item2">Item 2</div>
+                <div class="flex-item">Item 3</div>
+            </section>
+
+            <h3>Ejemplo con flex-direction</h3>
+            <p>HTML:</p>
+            <pre><code>&lt;section class="flex-container-column"&gt;
+    &lt;div class="flex-item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="flex-item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="flex-item"&gt;Item 3&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+
+            <p>CSS:</p>
+            <pre><code>.flex-container-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}</code></pre>
+
+            <section class="flex-container-column">
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item2">Item 2</div>
+                <div class="flex-item">Item 3</div>
+            </section>
+
+            <h3>Ejemplo con flex-wrap</h3>
+            <p>HTML:</p>
+            <pre><code>&lt;section class="flex-container-wrap"&gt;
+    &lt;div class="flex-item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="flex-item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="flex-item"&gt;Item 3&lt;/div&gt;
+    &lt;div class="flex-item"&gt;Item 4&lt;/div&gt;
+    &lt;div class="flex-item"&gt;Item 5&lt;/div&gt;
+    &lt;div class="flex-item"&gt;Item 6&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+
+            <p>CSS:</p>
+            <pre><code>.flex-container-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+.flex-item {
+    background-color: #e9ecef;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    flex: 1 1 150px;
+    margin: 5px;
+    text-align: center;
+}</code></pre>
+
+            <section class="flex-container-wrap">
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item2">Item 2</div>
+                <div class="flex-item">Item 3</div>
+                <div class="flex-item2">Item 4</div>
+                <div class="flex-item">Item 5</div>
+                <div class="flex-item">Item 6</div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>Documentación de referencia:</p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox en MDN</a></li>
+            <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Guía de Flexbox en CSS-Tricks</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
